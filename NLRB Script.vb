@@ -583,7 +583,7 @@ Sub of_CleanUp()
         .MatchAllWordForms = False
     End With
     Selection.Find.Execute Replace:=wdReplaceAll
-	With Selection.Find
+    With Selection.Find
         .Text = "OF"
         .Replacement.Text = "of"
         .Forward = True
@@ -596,7 +596,7 @@ Sub of_CleanUp()
         .MatchAllWordForms = False
     End With
     Selection.Find.Execute Replace:=wdReplaceAll
-	With Selection.Find
+    With Selection.Find
         .Text = "oF"
         .Replacement.Text = "of"
         .Forward = True
@@ -616,6 +616,19 @@ Sub and_CleanUp()
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
         .Text = "And"
+        .Replacement.Text = "and"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = True
+        .MatchWholeWord = True
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    With Selection.Find
+        .Text = "AND"
         .Replacement.Text = "and"
         .Forward = True
         .Wrap = wdFindContinue
@@ -948,7 +961,7 @@ Sub NYU_CleanUp()
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
         .Text = "Unite Here"
-        .Replacement.Text = "UNITE HERE"
+        .Replacement.Text = "UNITE HERE!"
         .Forward = True
         .Wrap = wdFindContinue
         .Format = False
@@ -1053,6 +1066,8 @@ Call Seiu_CleanUp
 Call Unite_Here_CleanUp
 Call Completed
 End Sub
+
+
 
 
 
