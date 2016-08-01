@@ -961,6 +961,19 @@ Sub NYU_CleanUp()
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
         .Text = "Unite Here"
+        .Replacement.Text = "UNITE HERE"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = True
+        .MatchWholeWord = True
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    With Selection.Find
+        .Text = "UNITE HERE"
         .Replacement.Text = "UNITE HERE!"
         .Forward = True
         .Wrap = wdFindContinue
@@ -998,6 +1011,23 @@ Sub NYU_CleanUp()
     With Selection.Find
         .Text = "Seiu"
         .Replacement.Text = "SEIU"
+        .Forward = True
+        .Wrap = wdFindContinue
+        .Format = False
+        .MatchCase = True
+        .MatchWholeWord = True
+        .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
+    End Sub
+    Sub Starting_The_CleanUp()
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "<p>the"
+        .Replacement.Text = "<p>The"
         .Forward = True
         .Wrap = wdFindContinue
         .Format = False
@@ -1064,14 +1094,6 @@ Call The_CleanUp
 Call Hms_CleanUp
 Call Seiu_CleanUp
 Call Unite_Here_CleanUp
+Call Starting_The_CleanUp
 Call Completed
 End Sub
-
-
-
-
-
-
-
-
-
