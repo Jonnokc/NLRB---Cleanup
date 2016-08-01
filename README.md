@@ -8,4 +8,5 @@ VB macro used in microsoft office which takes an internal file set in a specific
 The goal is to take the internal file and adjust the formatting on behalf of the user in order to improve efficenty. What once took hours now takes seconds. 
 
 <h2>How to use it</h2>
-Copy the NLRB file contents and paste into word. Then run macro. Will receive on screen popup when the macro has completed. 
+1.Copy the NLRB file contents and paste into word. 
+2.Then run macro. Will receive on screen popup when the macro has completed. 
